@@ -7,4 +7,8 @@ public class RediStreamingStatistics {
   public void recordPlay() {
     this.totalPlays = this.totalPlays + 1;
   }
+
+  public int totalPlays() {
+    return totalPlays;
+  }
 }

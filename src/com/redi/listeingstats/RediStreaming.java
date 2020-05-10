@@ -55,5 +55,8 @@ public class RediStreaming {
     System.out.println("Alina's top Artist: " + player.getTopArtistForFan(alina));
     System.out.println("Flo's top Track: " + player.getTopTrackForFan(flo));
     System.out.println("Alina's top Track: " + player.getTopTrackForFan(alina));
+
+    System.out.println();
+    System.out.println("Total plays: " + player.getTotalPlays());
   }
 }

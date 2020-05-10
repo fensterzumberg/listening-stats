@@ -20,7 +20,7 @@ public class UserStatistics {
       }
     }
     if (currentMax == 0 || maxTrack == null) {
-      System.out.println("No streams, therefore no top track");
+      System.out.println("No plays, therefore no top track");
       return maxTrack;
     }
     return maxTrack;
@@ -37,16 +37,16 @@ public class UserStatistics {
       }
     }
     if (currentMax == 0 || maxArtist == null) {
-      System.out.println("No streams, therefore no top artist");
+      System.out.println("No plays, therefore no top artist");
       return maxArtist;
     }
     return maxArtist;
   }
 
   public void recordPlay(final Track track) {
-    int totalTrackStreams = this.trackPlays.getOrDefault(track, 0) + 1;
-    this.trackPlays.put(track, totalTrackStreams);
-    int totalArtistStreams = this.artistPlays.getOrDefault(track.artist(), 0) + 1;
-    this.artistPlays.put(track.artist(), totalArtistStreams);
+    int totalTrackPlays = this.trackPlays.getOrDefault(track, 0) + 1;
+    this.trackPlays.put(track, totalTrackPlays);
+    int totalArtistPlays = this.artistPlays.getOrDefault(track.artist(), 0) + 1;
+    this.artistPlays.put(track.artist(), totalArtistPlays);
   }
 }

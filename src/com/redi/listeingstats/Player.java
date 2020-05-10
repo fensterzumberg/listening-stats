@@ -46,4 +46,8 @@ public class Player {
   public Track getTopTrackForFan(final User user) {
     return userStatistics.get(user).getFavoriteTrack();
   }
+
+  public int getTotalPlays() {
+    return rediStatistics.totalPlays();
+  }
 }
